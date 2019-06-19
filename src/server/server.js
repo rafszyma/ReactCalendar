@@ -22,4 +22,5 @@ server.get('/', (req, res) => {
   `)
 });
 
-server.listen(4242, () => console.log('Server is running...'));
+const port = 4242
+server.listen(port, () => console.log(`Server is running on ${port}...`));
