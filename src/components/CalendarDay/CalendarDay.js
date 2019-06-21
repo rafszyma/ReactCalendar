@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from "styled-components";
 
-
-const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
 const SingleDay = styled.div`
       width: 100px;
     margin: 0 auto;
@@ -24,7 +21,7 @@ display: inline-block;
  `;
 
 const CalendarDay = props => (
-    props.calendarDay == null ? <EmptyDay/> : <SingleDay>{dayNames[props.calendarDay.getDay()]}{}</SingleDay>
+    props.calendarDay == null ? <EmptyDay/> : <SingleDay>{props.calendarDay.getDate()}{}</SingleDay>
 );
 
 export default CalendarDay;
